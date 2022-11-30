@@ -33,7 +33,7 @@ library(ggplot2)
 The dataset (https://www.cdc.gov/nchs/nis/data_files_h1n1.htm) for this project comes from the National 2009 H1N1 Flu Survey (NHFS). The dataset included 26,707 observations and 36 distinct features, all of which are categorical or ordinal variables. The response variable is "H1N1_vaccine," which is a binary variable showing whether the individual gets vaccinated against H1N1. Before building any machine learning models, we first cleaned the dataset. We dropped random-coded-variables "hhs_geo_region", "employment_industry", and "employment_occupation." All three random-coded-variables present confidential information using random string character that we could not decipher. Since all the variables in this dataset are either categorical or ordinal, we transformed all variables into numeric (e.g. recoded as 1, 2, 3, 4) and regarded them as numeric variables in our study. Furthermore, we removed rows that have N/A values. The original dataset contains 36 predictor variables and 1 response variable with 26,707 observations. After data cleaning, the final dataset contains 33 predictor variables and 1 response variable with 11,794 observations, which is still large enough for us to make our model. Of the final dataset, 8,255 (70%) are randomly selected to be the training dataset and 3,539 (30%) are randomly selected to be the testing dataset. 
 
 ```{r}
-df = read.csv("total_data_comp562.csv")
+df = read.csv("total_data_comp562_Peiyu_Li(730434819)_Xiaoyue_Zhang(730358221)_Tongyu_Zhao(730366328)_Ruoting_Xia(730326159).csv")
 
 smp_size <- floor(0.7*nrow(df))
 
